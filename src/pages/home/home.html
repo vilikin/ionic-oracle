@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Oraakkeli
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="askWithSpeech()">
+        <ion-icon name="mic"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-input [(ngModel)]="question" class="big-input" type="text" placeholder="Kysy jotakin oraakkelilta?"></ion-input>
+  <button ion-button block large icon-only (click)="askBot(question)">
+    Kysy
+  </button>
+  <p>
+    Vastaukset tulevat suoraan <a href="http://www.lintukoto.net/viihde/oraakkeli/"> Lintukodon oraakkelilta</a>.
+    Parhaiten vastauksia saa kysymyksiin milloin, missä, mitä, miltä, kuka, kenet, keneltä, miksi, kuinka paljon, kuinka monta, mikä, kuinka usein, onko, oletko, kumpi, minne, kuinka jne.
+  </p>
+</ion-content>
